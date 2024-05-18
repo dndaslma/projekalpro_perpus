@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"pkg/pengguna"
 	"pkg/utils"
 )
 
 func main() {
 	var angka int
+	var p pengguna.ArrIdentitas
 
 	for {
 		utils.ClearScreen()
@@ -15,7 +17,7 @@ func main() {
 		fmt.Scan(&angka)
 
 		if angka == 1 {
-			fmt.Println("Kamu telah memilih nomor 1")
+			pengguna.Menu(&p)
 			utils.TungguEnter()
 		} else if angka == 2 {
 			fmt.Println("Kamu telah memilih nomor 2")
